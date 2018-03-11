@@ -39,7 +39,7 @@ public class BaseResponse {
 		this.replyTo = request.getReplyTo();
 	}
 	
-	public void setError(int errCode, String errDescription) throws BException {
+	public BaseResponse setError(int errCode, String errDescription) {
 		this.errCode = errCode;
 		this.errDescription = errDescription;
 		
@@ -49,8 +49,10 @@ public class BaseResponse {
 			error.put(kErrCode, errCode);
 			error.put(kErrDescription, errDescription);
 		} catch (BJsonException e) {
-			throw new BException("Error setting error object", e);
+			e.printStackTrace();
 		}
+
+		return this;
 	}
 
 	public String getReplyTo() {
@@ -62,12 +64,16 @@ public class BaseResponse {
 		return (null != error);
 	}
 	
-	public void setReplyTo(String replyTo) {
+	public BaseResponse setReplyTo(String replyTo) {
 		this.replyTo = replyTo;
+
+		return this;
 	}
 
-	public void removeReplyTo() {
+	public BaseResponse removeReplyTo() {
 		this.replyTo = null;
+
+		return this;
 	}
 
 	public String getApi() {
@@ -76,16 +82,20 @@ public class BaseResponse {
 
 
 
-	public void setApi(String api) {
+	public BaseResponse setApi(String api) {
 		this.api = api;
+
+		return this;
 	}
 
 	public String getReqid() {
 		return reqid;
 	}
 
-	public void setReqid(String reqid) {
+	public BaseResponse setReqid(String reqid) {
 		this.reqid = reqid;
+
+		return this;
 	}
 
 
@@ -95,8 +105,10 @@ public class BaseResponse {
 
 
 
-	public void setPayload(BJsonObject payload) {
+	public BaseResponse setPayload(BJsonObject payload) {
 		this.payload = payload;
+
+		return this;
 	}
 
 	
