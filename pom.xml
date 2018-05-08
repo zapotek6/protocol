@@ -1,26 +1,50 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>uk.co.labfour.cloud2</groupId>
-  <artifactId>protocol</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>protocol</name>
-  <dependencies>
-  	<dependency>
-  		<groupId>uk.co.labfour</groupId>
-  		<artifactId>bjson</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>uk.co.labfour.cloud2.data</groupId>
-  		<artifactId>entity</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>uk.co.labfour</groupId>
-  		<artifactId>error</artifactId>
-  	</dependency>
-  </dependencies>
-  <parent>
-  	<groupId>uk.co.labfour.cloud2</groupId>
-  	<artifactId>parent-pom</artifactId>
-  	<version>0.0.1</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>uk.co.labfour.cloud2</groupId>
+    <artifactId>protocol</artifactId>
+    <version>0.0.2</version>
+    <name>protocol</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>bsh-central</id>
+            <name>bsh-releases</name>
+            <url>http://artifactory.labfour.co.uk/artifactory/libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>bsh-snapshots</id>
+            <uniqueVersion>true</uniqueVersion>
+            <name>bsh-snapshots</name>
+            <url>http://artifactory.labfour.co.uk/artifactory/libs-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <parent>
+        <groupId>uk.co.labfour.cloud2</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>0.0.2</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.co.labfour</groupId>
+            <artifactId>bjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>uk.co.labfour.cloud2.data</groupId>
+            <artifactId>entity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>uk.co.labfour</groupId>
+            <artifactId>error</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
