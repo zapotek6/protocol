@@ -1,10 +1,10 @@
 package uk.co.labfour.cloud2.protocol;
 
-import java.util.UUID;
-
 import uk.co.labfour.bjson.BJsonException;
 import uk.co.labfour.bjson.BJsonObject;
 import uk.co.labfour.error.BException;
+
+import java.util.UUID;
 
 
 public class BaseRequest {
@@ -23,11 +23,7 @@ public class BaseRequest {
 	public final static String kAuth = "auth";
 	public final static String kPayload = "payload";
 	public final static String kReplyTo = "replyTo";
-	
-	
-	
-	
-	
+
 	public boolean isValid() {
 		return valid;
 	}
